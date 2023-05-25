@@ -22,5 +22,11 @@ class calculator {
         numerator2 = In.getInt();
         System.out.println("What is your second denominator");
         denominator2 = In.getInt();
+
+        if (operator == '+') {
+            
+        } else {
+            
+        }
     }
 }
