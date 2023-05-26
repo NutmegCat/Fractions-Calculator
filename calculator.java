@@ -80,14 +80,30 @@ class calculator {
     public static void subtraction(int numSub1, int denSub1, int numSub2, int denSub2) {
         System.out.println("\nYour equation is: (" + numSub1 + "/" + denSub1 + ") - (" + numSub2 + "/" + denSub2 + ") \n");
 
+        int numSubFinal;
+
+        //TODO fix mixed fraction
+
         // start math
         if (denSub1 != denSub2) {
             // make the denominator the same
+            int denSubLCM = denSub1 * denSub2;
+            int numSubLCM1 = numSub1 * denSub2;
+            int numSubLCM2 = numSub2 * denSub1;
 
-        } else {
-            
+            // the math part
+            numSubFinal = numSubLCM1 + numSubLCM2;
+
+            // output
+            System.out.println("--> The final fraction is: " + numSubFinal + "/" + denSubLCM);
+
+        } else if (denSub1 == denSub2){
+            // math
+            numSubFinal = numSub1 + numSub2;
+
+            // output
+            System.out.println("--> The final fraction is: " + numSubFinal + "/" + denSub1);
         }
-        
     }
 
     public static void multiplication(int numMul1, int denMul1, int numMul2, int denMul2) {
