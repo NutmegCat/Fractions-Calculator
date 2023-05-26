@@ -1,19 +1,17 @@
 // Aaron Prince Anu
 
 class calculator {
-
-    // global vars
-    static char operator;
-    static int numerator1;
-    static int denominator1;
-    static int numerator2;
-    static int denominator2;
-
     public static void main(String[] args) {
         
+        // initialize vars
+        int numerator1 = 0;
+        int numerator2 = 0;
+        int denominator1 = 0;
+        int denominator2 = 0;
+
         // ask inputs
         System.out.println("\nWhat is your operator? Press \'$\' to exit");
-        operator = In.getChar();
+        int operator = In.getChar();
 
         // if '$' is entered
         if (operator == '$') {
@@ -57,10 +55,20 @@ class calculator {
             // the math part
             numAddFinal = numAddLCM1 + numAddLCM2;
 
-            //output
-            System.out.println("--> The final fraction is: " + numAddFinal + "/" + denAddLCM);
+            // mixed fractions
+            if (numAddFinal > denAddLCM) {
+                int wholeNumber = numAddFinal / denAddLCM;
+                int subtract = wholeNumber * numAddFinal;
+                int mix = denAddLCM - subtract;
 
-        } else {
+                // output
+                System.out.println("--> The final fraction is: " + wholeNumber + "" + mix + "/" + denAddLCM);
+            } else if (numAddLCM1 <= denAddLCM) {
+                //output
+                System.out.println("--> The final fraction is: " + numAddFinal + "/" + denAddLCM);
+            }
+
+        } else if (denAdd1 == denAdd2){
             // the math part
             numAddFinal = numAdd1 + numAdd2;
 
