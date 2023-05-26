@@ -39,7 +39,7 @@ class calculator {
     }
 
     public static void addition(int numAdd1, int denAdd1, int numAdd2, int denAdd2) {
-        
+        //TODO fix the mixed fraction whatever
         int numAddFinal;
         
         // output initial equation
@@ -79,6 +79,15 @@ class calculator {
 
     public static void subtraction(int numSub1, int denSub1, int numSub2, int denSub2) {
         System.out.println("\nYour equation is: (" + numSub1 + "/" + denSub1 + ") - (" + numSub2 + "/" + denSub2 + ") \n");
+
+        // start math
+        if (denSub1 != denSub2) {
+            // make the denominator the same
+
+        } else {
+            
+        }
+        
     }
 
     public static void multiplication(int numMul1, int denMul1, int numMul2, int denMul2) {
