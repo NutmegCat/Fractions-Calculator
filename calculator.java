@@ -54,15 +54,14 @@ class calculator {
 
             // the math part
             numAddFinal = numAddLCM1 + numAddLCM2;
-
+            
             // mixed fractions
             if (numAddFinal > denAddLCM) {
                 int wholeNumber = numAddFinal / denAddLCM;
-                int subtract = wholeNumber * numAddFinal;
-                int mix = denAddLCM - subtract;
+                int numMixed = numAddFinal % denAddLCM;
 
                 // output
-                System.out.println("--> The final fraction is: " + wholeNumber + "" + mix + "/" + denAddLCM);
+                System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denAddLCM);
             } else if (numAddLCM1 <= denAddLCM) {
                 //output
                 System.out.println("--> The final fraction is: " + numAddFinal + "/" + denAddLCM);
@@ -72,6 +71,17 @@ class calculator {
             // the math part
             numAddFinal = numAdd1 + numAdd2;
 
+            // mixed fractions
+            if (numAddFinal > denAdd1) {
+                int wholeNumber = numAddFinal / denAdd1;
+                int numMixed = numAddFinal % denAdd1;
+
+                // output
+                System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denAdd1);
+            } else if (numAddFinal <= denAdd1) {
+                //output
+                System.out.println("--> The final fraction is: " + numAddFinal + "/" + denAdd1);
+            }
             // output
             System.out.println("--> The final fraction is: " + numAddFinal + "/" + denAdd1);
         }
@@ -94,15 +104,33 @@ class calculator {
             // the math part
             numSubFinal = numSubLCM1 + numSubLCM2;
 
-            // output
-            System.out.println("--> The final fraction is: " + numSubFinal + "/" + denSubLCM);
+            // mixed fractions
+            if (numSubFinal > denSub1) {
+                int wholeNumber = numSubFinal / denSub1;
+                int numMixed = numSubFinal % denSub1;
 
+                // output
+                System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denSub1);
+            } else if (numSubFinal <= denSub1) {
+                //output
+                System.out.println("--> The final fraction is: " + numSubFinal + "/" + denSub1);
+            }
+            
         } else if (denSub1 == denSub2){
             // math
             numSubFinal = numSub1 + numSub2;
 
-            // output
-            System.out.println("--> The final fraction is: " + numSubFinal + "/" + denSub1);
+            // mixed fractions
+            if (numSubFinal > denSub1) {
+                int wholeNumber = numSubFinal / denSub1;
+                int numMixed = numSubFinal % denSub1;
+
+                // output
+                System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denSub1);
+            } else if (numSubFinal <= denSub1) {
+                //output
+                System.out.println("--> The final fraction is: " + numSubFinal + "/" + denSub1);
+            }
         }
     }
 
