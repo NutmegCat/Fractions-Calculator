@@ -105,15 +105,15 @@ class calculator {
             numSubFinal = numSubLCM1 + numSubLCM2;
 
             // mixed fractions
-            if (numSubFinal > denSub1) {
-                int wholeNumber = numSubFinal / denSub1;
-                int numMixed = numSubFinal % denSub1;
+            if (numSubFinal > denSubLCM) {
+                int wholeNumber = numSubFinal / denSubLCM;
+                int numMixed = numSubFinal % denSubLCM;
 
                 // output
-                System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denSub1);
-            } else if (numSubFinal <= denSub1) {
+                System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denSubLCM);
+            } else if (numSubFinal <= denSubLCM) {
                 //output
-                System.out.println("--> The final fraction is: " + numSubFinal + "/" + denSub1);
+                System.out.println("--> The final fraction is: " + numSubFinal + "/" + denSubLCM);
             }
             
         } else if (denSub1 == denSub2){
@@ -136,9 +136,41 @@ class calculator {
 
     public static void multiplication(int numMul1, int denMul1, int numMul2, int denMul2) {
         System.out.println("\nYour equation is: (" + numMul1 + "/" + denMul1 + ") * (" + numMul2 + "/" + denMul2 + ") \n");
+
+        int numMulFinal = numMul1 * numMul2;
+        int denMulFinal = denMul1 * denMul2;
+
+        //mixed fractions
+        if (numMulFinal > denMulFinal) {
+            int wholeNumber = numMulFinal / denMulFinal;
+            int numMixed = numMulFinal % denMulFinal;
+
+            //output
+            System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denMulFinal);
+
+        } else {
+            //output
+            System.out.println("--> The final fraction is: " + numMulFinal + "/" + denMulFinal);
+        }
     }
 
     public static void division(int numDiv1, int denDiv1, int numDiv2, int denDiv2) {
         System.out.println("\nYour equation is: (" + numDiv1 + "/" + denDiv1 + ") / (" + numDiv2 + "/" + denDiv2 + ") \n");
+
+        int numDivFinal = numDiv1 * denDiv2; 
+        int denDivFinal = denDiv1 * numDiv2;
+
+        //mixed fractions
+        if (numDivFinal > denDivFinal) {
+            int wholeNumber = numDivFinal / denDivFinal;
+            int numMixed = numDivFinal % denDivFinal;
+
+            //output
+            System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denDivFinal);
+
+        } else {
+            //output
+            System.out.println("--> The final fraction is: " + numDivFinal + "/" + denDivFinal);
+        }
     }
 }
