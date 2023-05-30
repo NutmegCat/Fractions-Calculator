@@ -39,7 +39,6 @@ class calculator {
     }
 
     public static void addition(int numAdd1, int denAdd1, int numAdd2, int denAdd2) {
-        //TODO fix the mixed fraction whatever
         int numAddFinal;
         
         // output initial equation
@@ -91,8 +90,6 @@ class calculator {
         System.out.println("\nYour equation is: (" + numSub1 + "/" + denSub1 + ") - (" + numSub2 + "/" + denSub2 + ") \n");
 
         int numSubFinal;
-
-        //TODO fix mixed fraction
 
         // start math
         if (denSub1 != denSub2) {
