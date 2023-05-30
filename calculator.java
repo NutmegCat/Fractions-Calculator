@@ -4,10 +4,7 @@ class calculator {
     public static void main(String[] args) {
         
         // initialize vars
-        int numerator1 = 0;
-        int numerator2 = 0;
-        int denominator1 = 0;
-        int denominator2 = 0;
+        int numerator1 = 0, numerator2 = 0, denominator1 = 0, denominator2 = 0;
 
         // ask inputs
         System.out.println("\nWhat is your operator? Press \'$\' to exit");
