@@ -49,10 +49,29 @@ class calculator {
     }
 
     public static void addition(int numAdd1, int denAdd1, int numAdd2, int denAdd2) {
-        int numAddFinal;
         
         // output initial equation
         System.out.println("\nYour equation is: (" + numAdd1 + "/" + denAdd1 + ") + (" + numAdd2 + "/" + denAdd2 + ") \n");
+
+        int numAddFinal;
+
+        // checks if it's -ve
+        if(numAdd1 < 0 && denAdd1 < 0){
+	        numAdd1 = Math.abs(numAdd1);
+	        denAdd1 = Math.abs(denAdd1);
+	    }
+	    if(numAdd2 < 0 && denAdd2 < 0){
+	        numAdd2 = Math.abs(numAdd2);
+	        denAdd2 = Math.abs(denAdd2);
+	    }
+	    if(denAdd1 < 0 && numAdd1 > 0){
+	        denAdd1 = Math.abs(denAdd1);
+	        numAdd1 = numAdd1 - (numAdd1 * 2);
+	    }
+	    if(denAdd2 < 0 && numAdd2 > 0){
+	        denAdd2 = Math.abs(denAdd2);
+	        numAdd2 = numAdd2 - (numAdd2 * 2);
+	    }
 
         // start math
         if (denAdd1 != denAdd2) {
@@ -95,9 +114,29 @@ class calculator {
     }
 
     public static void subtraction(int numSub1, int denSub1, int numSub2, int denSub2) {
+       
+        // output initial equation
         System.out.println("\nYour equation is: (" + numSub1 + "/" + denSub1 + ") - (" + numSub2 + "/" + denSub2 + ") \n");
 
         int numSubFinal;
+
+        // checks if it's -ve
+        if(numSub1 < 0 && denSub1 < 0){
+	        numSub1 = Math.abs(numSub1);
+	        denSub1 = Math.abs(denSub1);
+	    }
+	    if(numSub2 < 0 && denSub2 < 0){
+	        numSub2 = Math.abs(numSub2);
+	        denSub2 = Math.abs(denSub2);
+	    }
+	    if(denSub1 < 0 && numSub1 > 0){
+	        denSub1 = Math.abs(denSub1);
+	        numSub1 = numSub1 - (numSub1 * 2);
+	    }
+	    if(denSub2 < 0 && numSub2 > 0){
+	        denSub2 = Math.abs(denSub2);
+	        numSub2 = numSub2 - (numSub2 * 2);
+	    }
 
         // start math
         if (denSub1 != denSub2) {
