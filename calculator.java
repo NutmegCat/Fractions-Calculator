@@ -4,14 +4,19 @@ class calculator {
         
         // initialize vars
         int numerator1 = 0, numerator2 = 0, denominator1 = 0, denominator2 = 0;
+        boolean start = true;
 
-        // ask inputs
+        //loop
+        while (start) {
+            // ask inputs
         System.out.println("\nWhat is your operator? Press \'$\' to exit");
         int operator = In.getChar();
 
         // if '$' is entered
         if (operator == '$') {
             System.out.println("\nExiting...\n");
+            start = false;
+            break;
         } else {
             System.out.println("\nWhat is your first numerator?");
             numerator1 = In.getInt();
@@ -31,6 +36,7 @@ class calculator {
             multiplication(numerator1, denominator1, numerator2, denominator2);
         } else if (operator == '/'){
             division(numerator1, denominator1, numerator2, denominator2);
+        }
         }
     }
 
