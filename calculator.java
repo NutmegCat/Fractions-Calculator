@@ -28,6 +28,14 @@ class calculator {
             denominator2 = In.getInt();
         }
 
+        if (denominator1 == 0 || denominator2 == 0) {
+            System.out.println("\nDenominators cannot be 0 \nExiting...\n");
+            start = false;
+            break;
+        } else {
+            ;
+        }
+
         if (operator == '+') {
             addition(numerator1, denominator1, numerator2, denominator2);
         } else if (operator == '-') {
@@ -83,8 +91,6 @@ class calculator {
                 //output
                 System.out.println("--> The final fraction is: " + numAddFinal + "/" + denAdd1);
             }
-            // output
-            System.out.println("--> The final fraction is: " + numAddFinal + "/" + denAdd1);
         }
     }
 
