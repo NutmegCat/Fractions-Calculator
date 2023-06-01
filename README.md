@@ -21,7 +21,7 @@ In the examples, the input is shown on one line. The program, however, should re
 
 Notice that improper fractions should be written as mixed numbers, as in (a), and integer results should be written as, as in (c). It is not, however, necessary to reduce fractions to lowest terms. The program should assume that a user will provide integers when required but it should not assume that the integers will produce valid results. For example, bad data such as:
 
-` + 3 5 4 0` --> 0 in the denomiator should be classified as an error
+` + 3 5 4 0` --> 0 in the denominator should be classified as an error
 
 This should be detected by the program. In such cases, the program should write an error message and then continue to process the next set of data. 
 
