@@ -23,11 +23,7 @@ Notice that improper fractions should be written as mixed numbers, as in (a), an
 ` + 3 5 4 0` --> 0 in the denominator should be classified as an error
 
 This should be detected by the program. In such cases, the program should write an error message and then continue to process the next set of data. 
-
- 
-
-
-
+<br></br>
 ### Criteria
 - Fully functional program that meets the requirements
 - Validation that meets the requirements
