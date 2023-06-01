@@ -88,8 +88,15 @@ class calculator {
                 int wholeNumber = numAddFinal / denAddLCM;
                 int numMixed = numAddFinal % denAddLCM;
 
-                // output
-                System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denAddLCM);
+                // 0 mixed fractions
+                if (numMixed == 0) {
+                    int correction = wholeNumber / denAdd1;
+                    System.out.println("--> The final fraction is " + correction + "/" + denAdd1);
+                } else {
+                    // output
+                    System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denAddLCM);
+                }
+
             } else if (numAddLCM1 <= denAddLCM) {
                 //output
                 System.out.println("--> The final fraction is: " + numAddFinal + "/" + denAddLCM);
@@ -153,8 +160,15 @@ class calculator {
                 int wholeNumber = numSubFinal / denSubLCM;
                 int numMixed = numSubFinal % denSubLCM;
 
-                // output
-                System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denSubLCM);
+                // 0 mixed fractions
+                if (numMixed == 0) {
+                    int correction = wholeNumber / denSub1;
+                    System.out.println("--> The final fraction is " + correction + "/" + denSub1);
+                } else {
+                    // output
+                    System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denSubLCM);
+                }
+
             } else if (numSubFinal <= denSubLCM) {
                 //output
                 System.out.println("--> The final fraction is: " + numSubFinal + "/" + denSubLCM);
@@ -162,36 +176,62 @@ class calculator {
             
         } else if (denSub1 == denSub2){
             // math
-            numSubFinal = numSub1 + numSub2;
+            numSubFinal = numSub1 - numSub2;
 
             // mixed fractions
             if (numSubFinal > denSub1) {
                 int wholeNumber = numSubFinal / denSub1;
                 int numMixed = numSubFinal % denSub1;
 
-                // output
+                // 0 mixed fraction 
+                if (numMixed == 0) {
+                    int correction = wholeNumber / denSub1;
+                    System.out.println("--> The final fraction is " + correction + "/" + denSub1);
+                } else {
+                    // output
                 System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denSub1);
+                }
+
             } else if (numSubFinal <= denSub1) {
-                //output
+                // output
                 System.out.println("--> The final fraction is: " + numSubFinal + "/" + denSub1);
             }
-        }
+            }
     }
 
     public static void multiplication(int numMul1, int denMul1, int numMul2, int denMul2) {
+        
+        // output initial equation
         System.out.println("\nYour equation is: (" + numMul1 + "/" + denMul1 + ") * (" + numMul2 + "/" + denMul2 + ") \n");
 
+        // multiply
         int numMulFinal = numMul1 * numMul2;
         int denMulFinal = denMul1 * denMul2;
+        
+        // checks
+        if(numMulFinal < 0 && denMulFinal < 0){
+        numMulFinal = Math.abs(numMulFinal);
+	        denMulFinal = Math.abs(denMulFinal);
+	    }
+	    if(denMulFinal < 0 && numMulFinal > 0){
+	        denMulFinal = Math.abs(denMulFinal);
+	        numMulFinal = numMulFinal - (numMulFinal * 2);
+	    }
 
         //mixed fractions
         if (numMulFinal > denMulFinal) {
             int wholeNumber = numMulFinal / denMulFinal;
             int numMixed = numMulFinal % denMulFinal;
 
-            //output
-            System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denMulFinal);
-
+            // 0 mixed fractions
+            if (numMixed == 0) {
+                int correction = wholeNumber / denMulFinal;
+                System.out.println("--> The final fraction is " + correction + "/" + denMulFinal);
+            } else {
+                //output
+                System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denMulFinal);
+            }
+        
         } else {
             //output
             System.out.println("--> The final fraction is: " + numMulFinal + "/" + denMulFinal);
@@ -199,18 +239,37 @@ class calculator {
     }
 
     public static void division(int numDiv1, int denDiv1, int numDiv2, int denDiv2) {
+        // output initial equation
         System.out.println("\nYour equation is: (" + numDiv1 + "/" + denDiv1 + ") / (" + numDiv2 + "/" + denDiv2 + ") \n");
 
+        // divide
         int numDivFinal = numDiv1 * denDiv2; 
         int denDivFinal = denDiv1 * numDiv2;
 
-        //mixed fractions
+        //checks
+        if(numDivFinal < 0 && denDivFinal < 0){
+            numDivFinal = Math.abs(numDivFinal);
+                denDivFinal = Math.abs(denDivFinal);
+            }
+            if(denDivFinal < 0 && numDivFinal > 0){
+                denDivFinal = Math.abs(denDivFinal);
+                numDivFinal = numDivFinal - (numDivFinal * 2);
+            }
+    
+
+        // mixed fractions
         if (numDivFinal > denDivFinal) {
             int wholeNumber = numDivFinal / denDivFinal;
             int numMixed = numDivFinal % denDivFinal;
 
-            //output
-            System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denDivFinal);
+            // 0 mixed fractions
+            if (numMixed == 0) {
+                int correction = wholeNumber / denDivFinal;
+                System.out.println("--> The final fraction is " + correction + "/" + denDivFinal);
+            } else {
+                //output
+                System.out.println("--> The final fraction is: " + wholeNumber + " " + numMixed + "/" + denDivFinal);
+            }
 
         } else {
             //output
