@@ -84,7 +84,7 @@ class calculator {
             numAddFinal = numAddLCM1 + numAddLCM2;
             
             // mixed fractions
-            if (numAddFinal > denAddLCM) {
+            if (Math.abs(numAddFinal) >= denAddLCM) {
                 int wholeNumber = numAddFinal / denAddLCM;
                 int numMixed = numAddFinal % denAddLCM;
 
@@ -107,7 +107,7 @@ class calculator {
             numAddFinal = numAdd1 + numAdd2;
 
             // mixed fractions
-            if (numAddFinal > denAdd1) {
+            if (Math.abs(numAddFinal) >= denAdd1) {
                 int wholeNumber = numAddFinal / denAdd1;
                 int numMixed = numAddFinal % denAdd1;
 
@@ -156,7 +156,7 @@ class calculator {
             numSubFinal = numSubLCM1 + numSubLCM2;
 
             // mixed fractions
-            if (numSubFinal > denSubLCM) {
+            if (Math.abs(numSubFinal) >= denSubLCM) {
                 int wholeNumber = numSubFinal / denSubLCM;
                 int numMixed = numSubFinal % denSubLCM;
 
@@ -179,7 +179,7 @@ class calculator {
             numSubFinal = numSub1 - numSub2;
 
             // mixed fractions
-            if (numSubFinal > denSub1) {
+            if (Math.abs(numSubFinal) >= denSub1) {
                 int wholeNumber = numSubFinal / denSub1;
                 int numMixed = numSubFinal % denSub1;
 
@@ -196,7 +196,7 @@ class calculator {
                 // output
                 System.out.println("--> The final fraction is: " + numSubFinal + "/" + denSub1);
             }
-            }
+        }
     }
 
     public static void multiplication(int numMul1, int denMul1, int numMul2, int denMul2) {
@@ -219,7 +219,7 @@ class calculator {
 	    }
 
         //mixed fractions
-        if (numMulFinal > denMulFinal) {
+        if (Math.abs(numMulFinal) >= denMulFinal) {
             int wholeNumber = numMulFinal / denMulFinal;
             int numMixed = numMulFinal % denMulFinal;
 
@@ -258,7 +258,7 @@ class calculator {
     
 
         // mixed fractions
-        if (numDivFinal > denDivFinal) {
+        if (Math.abs(numDivFinal) >= denDivFinal) {
             int wholeNumber = numDivFinal / denDivFinal;
             int numMixed = numDivFinal % denDivFinal;
 
