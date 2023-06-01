@@ -45,8 +45,8 @@ class calculator {
         } else if (operator == '/'){
             division(numerator1, denominator1, numerator2, denominator2);
         }
-        }
     }
+}
 
     public static void addition(int numAdd1, int denAdd1, int numAdd2, int denAdd2) {
         
